@@ -15,4 +15,16 @@ def list_users():
     return users
 
 #POST - CREATE USER
+
+@router.post("/users")
+def create_user(user: User):
+    user_dict = user.model_dump()
+    result = users_collection.insert_one(user_dict)
+
+    return {
+        "message":"User created",
+        "id": str(result.inserted_id)
+    }
+
+
 #GET - USER BY ID
