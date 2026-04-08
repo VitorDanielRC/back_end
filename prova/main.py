@@ -1,14 +1,10 @@
 from fastapi import FastAPI
-from routers.tarefa_router import router as tarefa_router
+from routers.planeta_router import router
 
-app = FastAPI(
-    title="CRUD de Tarefas",
-    description="API CRUD com FastAPI + MongoDB + Docker",
-    version="1.0.0"
-)
+app = FastAPI()
 
-app.include_router(tarefa_router, prefix="/tarefas", tags=["Tarefas"])
+app.include_router(router)
 
 @app.get("/")
 def home():
-    return {"message": "FastAPI + MongoDB + Docker funcionando"}
+    return {"Message": "Sistema de cadastro de planetas com MongoDB e FastAPI"}

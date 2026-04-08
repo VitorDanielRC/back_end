@@ -1,17 +1,18 @@
 services:
   mongodb:
     image: mongo:7
-    container_name: mongodb
     ports:
-      - "27017:27017"
+      - "27018:27017"
     volumes:
       - mongo_data:/data/db
 
   api:
     build: .
-    container_name: fastapi_crud
     ports:
       - "8000:8000"
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017
+      - MONGO_DB=P2BackEnd
     depends_on:
       - mongodb
 
