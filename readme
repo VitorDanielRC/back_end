@@ -1,0 +1,3 @@
+Comando para criar pastas do alembic
+
+alembic init alembic

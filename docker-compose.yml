@@ -1,0 +1,16 @@
+services:
+  db: 
+    image: postgres:15
+    container_name: fastapi_db
+    restart: always
+    environment:
+      -POSTRES_USER: usuario
+      POSTRES_PASSWORD: senha123
+      POSTRES_DB:  meubanco
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
