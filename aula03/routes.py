@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from bson import ObjectId
 from database import users_collection
-from schemas import User
+from aula07.schemas import User
 
 router = APIRouter()
 #GET/All users

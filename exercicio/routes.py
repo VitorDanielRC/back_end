@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from bson import ObjectId
 from database import veiculos_collection
-from schemas import Veiculos
+from aula07.schemas import Veiculos
 
 router = APIRouter()
 #GET/All users
