@@ -1,13 +1,12 @@
-#API 
+# API
 fastapi
-uvicorn[standart]
+uvicorn
 
 sqlalchemy
-psycopg-binary
+psycopg
 
 alembic
 
 python-dotenv
 
 email-validator
-
